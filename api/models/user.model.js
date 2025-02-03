@@ -14,8 +14,13 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
-}, {timestamps: true}); // one is time of creation of user and another is time of update of the user.
+    },
+    avatar: {
+        type: String,
+        default: "https://images.ctfassets.net/hrltx12pl8hq/33OHYwkr7a1prXiTMsDpbe/a49615388a95bf985579c19d11065b8d/11_abstract_lines.webp"
+    },
+}, 
+{timestamps: true}); // one is time of creation of user and another is time of update of the user.
 
 
 const User = mongoose.model('User', userSchema);
